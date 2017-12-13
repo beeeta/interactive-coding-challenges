@@ -13,11 +13,11 @@ class TestPriorityQueue(object):
         priority_queue.insert(PriorityQueueNode('e', 40))
         priority_queue.insert(PriorityQueueNode('f', 3))
         priority_queue.decrease_key('f', 2)
-        priority_queue.decrease_key('a', 19)
+        priority_queue.decrease_key('a', 22)
         mins = []
         while priority_queue.array:
             mins.append(priority_queue.extract_min().key)
-        assert_equal(mins, [2, 5, 15, 19, 22, 40])
+        assert_equal(mins, [2, 5, 15, 22, 22, 40])
         print('Success: test_min_heap')
 
 
